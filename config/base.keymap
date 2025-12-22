@@ -168,11 +168,11 @@ SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
 // Tap: space | Shift + tap: dot -> space -> sticky shift | Hold: nav layer.
-//ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&spc_morph>; flavor = "balanced";
-//             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
-//SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
-//ZMK_MACRO(dot_spc, bindings = <&kp DOT &kp SPACE &sk LSHFT>; wait-ms = <0>;
-//          tap-ms = <5>;)
+ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&spc_morph>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+SIMPLE_MORPH(spc_morph, SFT, &kp SPACE, &dot_spc)
+ZMK_MACRO(dot_spc, bindings = <&kp DOT &kp SPACE &sk LSHFT>; wait-ms = <0>;
+          tap-ms = <5>;)
 
 // Tap: backspace | Lshft + tap: delete | Rshft + tap: shift-delete.
 ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
@@ -208,7 +208,7 @@ ZMK_LAYER(base,
 /*├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤*/
     ___           &kp Z         &kp X         &kp C         &kp V         &kp B         &kp C_MUTE      ___           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      ___
 /*╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴───────────────────────────╯*/
-                                ___           ___           ___           &kp SPACE     &kp RET         SMART_NUM     MAGIC_SHIFT   ___           ___           ___
+                                ___           ___           ___          &lt_spc NAV 0  &kp RET         SMART_NUM     MAGIC_SHIFT   ___           ___           ___
 /*                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯*/
 ,
    &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
