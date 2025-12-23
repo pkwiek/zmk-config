@@ -14,6 +14,12 @@
         }; \
     };
 
+// Optional: Overwrite default behavior properties
+&uc {
+  default-mode = <UC_MODE_LINUX>;  // Default to Linux input system
+  minimum-length = <4>;            // Set to desired minimum input length
+};
+
 /* Polish diacritics */
 ZMK_LEADER_SEQUENCE(pl_a_ogonek, &uc UC_PL_A_OGONEK, A)  // ą/Ą
 ZMK_LEADER_SEQUENCE(pl_c_acute,  &uc UC_PL_C_ACUTE,  C)  // ć/Ć
