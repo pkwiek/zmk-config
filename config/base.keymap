@@ -183,7 +183,7 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
               tapping-term-ms = <200>;)
 
 // Sticky shift + leader.
-ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
+//ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
@@ -206,9 +206,9 @@ ZMK_LAYER(base,
 /*├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤*/
     &kp TAB       &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G                                       &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMI &kp SQT
 /*├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤*/
-    ___           &kp Z         &kp X         &kp C         &kp V         &kp B         &kp C_MUTE      ___           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      ___
+    &leader2      &kp Z         &kp X         &kp C         &kp V         &kp B         &kp C_MUTE      ___           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      ___
 /*╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴───────────────────────────╯*/
-                                ___           ___           ___          &lt_spc NAV 0  &lt FN RET      SMART_NUM     MAGIC_SHIFT   ___           ___           ___
+                                ___            ___          ___          &lt_spc NAV 0  &lt FN RET      SMART_NUM     MAGIC_SHIFT   &kp RALT      ___           ___
 /*                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯*/
 ,
    &inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN
