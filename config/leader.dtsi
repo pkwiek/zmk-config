@@ -52,6 +52,7 @@ ZMK_LEADER_SEQUENCE(pl_n_acute,  &uc UC_PL_N_ACUTE,  N)  // ń/Ń
 ZMK_LEADER_SEQUENCE(pl_s_acute,  &uc UC_PL_S_ACUTE,  S)  // ś/Ś
 ZMK_LEADER_SEQUENCE(pl_z_acute,  &uc UC_PL_Z_ACUTE,  X)  // ź/Ź
 ZMK_LEADER_SEQUENCE(pl_z_dot,    &uc UC_PL_Z_DOT,    Z)  // ż/Ż
+ZMK_LEADER_SEQUENCE(ao_lower_leader,    &ao_lower, K)  // ż/Ż
 
 /* Greek letters */
 ZMK_LEADER_SEQUENCE(el_alpha,   &uc UC_EL_ALPHA,   G A)  // α
