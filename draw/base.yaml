@@ -185,54 +185,54 @@ layers:
     - {type: trans}
   num:
     - {type: trans}
-    - F1
-    - F2
-    - F3
-    - F4
-    - F5
-    - F6
-    - F7
-    - F8
-    - F9
-    - F10
-    - F11
-    - '`'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-    - '5'
-    - '6'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - '7'
     - '8'
     - '9'
-    - '0'
-    - F12
-    - {type: trans}
-    - {t: '!', h: Gui}
-    - {t: '@', h: Alt}
-    - {t: '#', h: Shift}
-    - {t: $, h: Ctrl}
-    - '%'
-    - ^
-    - '&'
-    - '*'
-    - (
-    - )
-    - '|'
-    - {type: trans}
-    - '='
-    - '-'
-    - +
-    - '{'
-    - '}'
     - {type: trans}
     - {type: trans}
-    - {t: '[', right: '{'}
-    - {t: ']', right: '}'}
-    - ;
-    - ':'
-    - \
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: '0', h: Gui}
+    - {t: '4', h: Alt}
+    - {t: '5', h: Shift}
+    - {t: '6', h: Ctrl}
+    - {type: trans}
+    - {type: trans}
+    - Ctrl
+    - Shift
+    - Alt
+    - Gui
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -371,6 +371,12 @@ layers:
     '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
     '', '']
 combos:
+  - p: [25, 53]
+    k: Ctl+Spc
+    l: [Combos]
+  - p: [28, 53]
+    k: Ctl+Spc
+    l: [Combos]
   - p: [14, 15]
     k: Esc
     l: [Combos]
