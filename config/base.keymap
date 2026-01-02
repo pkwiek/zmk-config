@@ -157,11 +157,11 @@ ZMK_TRI_STATE(
 
 // Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
 SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+SIMPLE_MORPH(comma_inner_morph, CTL, &kp SQT, &kp LESS_THAN)
 
 // Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
 SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+SIMPLE_MORPH(dot_inner_morph, CTL, &kp DQT, &kp GREATER_THAN)
 
 // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
@@ -206,7 +206,7 @@ ZMK_LAYER(base,
 /*├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤*/
     &kp TAB       &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G                                       &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI SEMI &kp SQT
 /*├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────╮ ╭─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤*/
-    ___           &kp Z         &kp X         &kp C         &kp V         &kp B         &kp C_MUTE      ___           &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      ___
+    ___           &kp Z         &kp X         &kp C         &kp V         &kp B         &kp C_MUTE      ___           &kp N         &kp M         &comma_morph  &dot_morph    &kp FSLH      ___
 /*╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴───────────────────────────╯*/
                                 ___            ___          ___          &lt_spc NAV 0  &lt FN RET      SMART_NUM     MAGIC_SHIFT   &kp RALT      ___           ___
 /*                            ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯*/
