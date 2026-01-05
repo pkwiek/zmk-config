@@ -466,7 +466,7 @@ combos:
     k: '-'
     l: [Combos]
   - p: [32, 46]
-    k: /
+    k: '!'
     l: [Combos]
   - p: [33, 47]
     k: '|'
