@@ -76,11 +76,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - Mouse →
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - Scroll ↓
+    - Mouse ↑
+    - Scroll ↑
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -88,10 +86,12 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
+    - {type: trans}
+    - Scroll ←
     - Mouse ←
     - Mouse ↓
     - Mouse →
-    - {type: trans}
+    - Scroll →
     - ←
     - ↓
     - ↑
@@ -118,7 +118,7 @@ layers:
     - {type: held}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - CANCEL
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -320,14 +320,14 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - Scroll ↓
     - Mouse ↑
+    - Scroll ↑
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - {type: trans}
+    - Scroll ↓
     - Mouse ↑
-    - {type: trans}
+    - Scroll ↑
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -358,12 +358,134 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - Scroll ↓
-    - Scroll ↑
     - {type: trans}
     - {type: trans}
-    - Scroll ↑
-    - Scroll ↓
+    - {type: trans}
+    - {type: trans}
+    - CANCEL
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  sticky_macros:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: sticky_macros, h: toggle}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: Magic, h: Shift}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  nav_sticky_macros:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: nav_sticky_macros, h: toggle}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {t: Magic, h: Shift}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
   Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
@@ -396,13 +518,19 @@ combos:
     k: Del
     l: [Combos]
   - p: [31, 32]
+    k: {t: '&rpar_left', h: Sft+Ctrl}
+    l: [Combos]
+  - p: [31, 32]
     k: {t: (, right: <}
     l: [Combos]
   - p: [32, 33]
     k: {t: ), right: '>'}
     l: [Combos]
   - p: [31, 32]
-    k: <
+    k: {t: '&gt_left', h: Sft+Ctrl}
+    l: [Combos]
+  - p: [31, 32]
+    k: '&lt_nslay'
     l: [Combos]
     hidden: true
   - p: [32, 33]
@@ -410,13 +538,19 @@ combos:
     l: [Combos]
     hidden: true
   - p: [45, 46]
-    k: {t: '[', right: '{'}
+    k: '&rbkt_left'
+    l: [Combos]
+  - p: [45, 46]
+    k: '&lbkt_slay'
     l: [Combos]
   - p: [46, 47]
     k: {t: ']', right: '}'}
     l: [Combos]
   - p: [45, 46]
-    k: '{'
+    k: '&rbrc_left'
+    l: [Combos]
+  - p: [45, 46]
+    k: '&lbrc_nslay'
     l: [Combos]
     hidden: true
   - p: [46, 47]
