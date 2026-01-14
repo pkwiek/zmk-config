@@ -161,14 +161,6 @@ ZMK_TRI_STATE(
   ZMK_MOD_MORPH(NAME, mods = <(MOD_##MOD)>;                                    \
                 bindings = <BINDING1>, <BINDING2>;)
 
-// Tap: comma | Shift + tap: semicolon | Ctrl + shift + tap: <.
-SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-SIMPLE_MORPH(comma_inner_morph, CTL, &kp SQT, &kp LESS_THAN)
-
-// Tap: dot | Shift + tap: colon | Ctrl + shift + tap: >.
-SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-SIMPLE_MORPH(dot_inner_morph, CTL, &kp DQT, &kp GREATER_THAN)
-
 // Tap: left/right parenthesis | Shft + tap: less-than/greater-than.
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
@@ -223,6 +215,24 @@ ZMK_MACRO(lbkt_slay, bindings = <&kp LBKT &sl SMAC>; wait-ms = <0>; tap-ms = <0>
 
 ZMK_MACRO(rbrc_left, bindings = <&kp RBRC &unsft_left>; wait-ms = <0>; tap-ms = <0>;)
 ZMK_MACRO(lbrc_nslay, bindings = <&kp LBRC &sl NSMAC>; wait-ms = <0>; tap-ms = <0>;)
+
+// Tap: comma | Shift + tap: single quote | Ctrl + shift + tap: < |
+// Double-tap: cursor inside single quotes.
+ZMK_MACRO(sqt_left, bindings = <&kp SQT &kp SQT &unsft_left>; wait-ms = <0>; tap-ms = <0>;)
+ZMK_TAP_DANCE(sqt_tap_dance, bindings = <&sqt_always_morph>, <&sqt_left>;
+              tapping-term-ms = <200>;)
+SIMPLE_MORPH(sqt_always_morph, SFT, &kp SQT, &kp SQT)
+SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
+SIMPLE_MORPH(comma_inner_morph, CTL, &sqt_tap_dance, &kp LESS_THAN)
+
+// Tap: dot | Shift + tap: double quote | Ctrl + shift + tap: > |
+// Double-tap: cursor inside double quotes.
+ZMK_MACRO(dqt_left, bindings = <&kp DQT &kp DQT &unsft_left>; wait-ms = <0>; tap-ms = <0>;)
+ZMK_TAP_DANCE(dqt_tap_dance, bindings = <&dqt_always_morph>, <&dqt_left>;
+              tapping-term-ms = <200>;)
+SIMPLE_MORPH(dqt_always_morph, SFT, &kp DQT, &kp DQT)
+SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
+SIMPLE_MORPH(dot_inner_morph, CTL, &dqt_tap_dance, &kp GREATER_THAN)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
