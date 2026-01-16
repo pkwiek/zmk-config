@@ -21,8 +21,13 @@
 include:
   - board: nice_nano_v2
     shield: sofle_left nice_view_adapter nice_view
+    artifact-name: sofle_left
+    id: A9B7753881E47AF6
   - board: nice_nano_v2
     shield: sofle_right nice_view_adapter nice_view
+    artifact-name: sofle_right
+    id: 669D4A9CE1D2E880
     #snippet: zmk-usb-logging
   - board: nice_nano_v2
     shield: settings_reset
+    artifact-name: settings_reset
