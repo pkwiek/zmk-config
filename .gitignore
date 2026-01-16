@@ -1,3 +1,5 @@
 /zmk
 /zephyr
 /modules
+/build
+/artifacts
