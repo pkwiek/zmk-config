@@ -20,12 +20,12 @@
 };
 
 &mmv_input_listener {
-  //warp {
-  //  layers = <NAV>;
-  //  input-processors = <&zip_xy_scaler 3 1>;
-  //};
+  warp {
+    layers = <WNAV>;
+    input-processors = <&zip_xy_scaler 3 1>;
+  };
   precision {
-    layers = <FN>;
+    layers = <PNAV>;
     input-processors = <&zip_xy_scaler 1 2>;
   };
 };
@@ -42,11 +42,11 @@
 
 &msc_input_listener {
   warp {
-    layers = <NAV>;
+    layers = <WNAV>;
     input-processors = <&zip_scroll_scaler 2 1>;
   };
   precision {
-    layers = <FN>;
+    layers = <PNAV>;
     input-processors = <&zip_scroll_scaler 1 2>;
   };
 };
