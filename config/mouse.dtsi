@@ -20,9 +20,13 @@
 };
 
 &mmv_input_listener {
+  teleport {
+    layers = <TNAV>;
+    input-processors = <&zip_xy_scaler 4 1>;
+  };
   warp {
     layers = <WNAV>;
-    input-processors = <&zip_xy_scaler 3 1>;
+    input-processors = <&zip_xy_scaler 2 1>;
   };
   precision {
     layers = <PNAV>;
